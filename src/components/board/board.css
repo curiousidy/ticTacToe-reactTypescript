@@ -1,0 +1,27 @@
+.board-row {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    column-gap: 0px;
+    row-gap: 0px;
+    margin: 0 auto;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.reset-button {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 100%x;
+    margin-right: -1px;
+    margin-top: 11px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
