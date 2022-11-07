@@ -13,7 +13,7 @@ const Game = () => {
 
 
     const handleClick = (data: number) => {
-        const history = stateHistory.history;//todo with stepnumber
+        const history = stateHistory.history.slice(0, stateHistory.stepNumber + 1);
         const current = history[history.length - 1];
         const squares = current.squares.slice();
 
@@ -37,7 +37,7 @@ const Game = () => {
     }
 
     const history = stateHistory.history;
-    const current = history[history.length - 1];//todo with stepnumber
+    const current = history[stateHistory.stepNumber];
     const winner = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
@@ -62,7 +62,7 @@ const Game = () => {
                 <div>
                     {
                         history.map((step, move) => {
-                            const desc = move ? `Go to move ${move}` : 'Go to game start';
+                            const desc = move ? `Go to move ${move}` : 'Go to move 0';
                             return (
                                 <li key={move}>
                                     <button onClick={() => jumpTo(move)}>

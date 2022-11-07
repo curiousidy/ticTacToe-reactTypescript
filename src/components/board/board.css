@@ -4,7 +4,7 @@
     grid-template-rows: 50px 50px 50px;
     column-gap: 0px;
     row-gap: 0px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .status {
